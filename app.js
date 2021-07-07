@@ -16,7 +16,7 @@ app.listen(PORT_NUM, () => {
     console.log(`Connected on port ${PORT_NUM}`)
 })
 
-app.get("/getinfo", async (req, res) => {
+app.get("/getinfo", async (req, res, next) => {
 
     urls = []
     const response = await got(dinoURL) 
@@ -34,5 +34,5 @@ app.get("/getinfo", async (req, res) => {
         }
     })
 
-    res.json({url: urls[0], name:dinoName}) 
+    res.json({name:dinoName, url:urls[0]})
 })
