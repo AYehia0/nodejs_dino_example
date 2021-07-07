@@ -2,6 +2,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
     "express": "^4.17.1",
+    "got": "^9.6.0",
     "node-fetch": "^2.6.1"
   },
   "name": "dinasor_app",
